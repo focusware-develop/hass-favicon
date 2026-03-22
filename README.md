@@ -1,3 +1,9 @@
+# DEPRECATED
+
+Try [Browser Mod](https://github.com/thomasloven/hass-browser_mod) instead.
+
+
+
 favicon
 =======
 
