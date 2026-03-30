@@ -41,8 +41,11 @@ async def async_setup(hass, config):
 async def async_setup_entry(hass, config_entry):
     config_entry.add_update_listener(_update_listener)
     if not config_entry.options:
-        config_entry.options = config_entry.data
-    return await _update_listener(hass, config_entry)
+        hass.config_entries.async_update_entry(
+            config_entry,
+            options=config_entry.data
+        )
+     return await _update_listener(hass, config_entry)
 
 
 async def async_remove_entry(hass, config_entry):
